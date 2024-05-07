@@ -9,7 +9,7 @@ openai.api_key = os.environ.get("OPENAI_API_KEY")
 gitlab_token = os.environ.get("GITLAB_TOKEN")
 gitlab_url = os.environ.get("GITLAB_URL")
 
-api_base = os.environ.get("AZURE_OPENAI_API_BASE")
+api_base = os.environ.get("OPENAI_BASE_URL")
 if api_base != None:
     openai.api_base = api_base
 
@@ -115,4 +115,4 @@ def webhook():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8088)
